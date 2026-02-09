@@ -15,6 +15,9 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip requests
+
       - name: Run submission
         env:
           B12_NAME: ${{ vars.B12_NAME }}
